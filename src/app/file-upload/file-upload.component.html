@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Upload Files</h2>
+  <input type="file" (change)="onFilesSelected($event)" multiple />
+  <br />
+  <button (click)="uploadFiles()" [disabled]="!selectedFiles.length">
+    Upload
+  </button>
+  <p *ngIf="message">{{ message }}</p>
+</div>
